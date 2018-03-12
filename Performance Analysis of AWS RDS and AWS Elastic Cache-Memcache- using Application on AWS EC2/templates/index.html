@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Name:Atharv Kashyap Student ID:1001409568 </h1>
+    <img src="https://s3.amazonaws.com/Athmybuck/mypic.jpg">
+    <h1>Here you can upload a file</h1>
+    <form id="upload_form" action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="uploaded_files/*" multiple>
+      
+      <input type="submit" name="upload" value="Upload file" >
+	  
+    </form>
+    <br>
+    <br>
+    <form id="query_form" action="/limit" method="POST" >
+    <label><b>Limit</b></label>
+    <input type="text" placeholder="Enter limit" name="limit">
+    <input type="submit" name="query" value="query">
+    <br>
+    Time taken for rds: {{ ttrds }}
+    <br>
+    Time taken for memecache : {{ ttmemcache }}
+    <br>
+    <br>
+    </form>
+    <form id="query1_form" action="/query1" method="POST" >
+    <label><b>age</b></label>
+    <input type="text" placeholder="Enter Age" name="Min">
+    <br>
+    <label><b>sex</b></label>
+    <input type="text" placeholder="Enter Sex" name="Max">
+    <input type="submit" name="query1" value="query">
+    </form>
+    <br>
+    <br>
+    <br>
+    <form id="query2_form" action="/query2" method="POST" >
+    <label><b>range 1 value 1</b></label>
+    <input type="text" placeholder="Enter range value 1" name="place1">
+    <br>
+    <br>
+    <label><b>range value 2</b></label>
+    <input type="text" placeholder="Enter Range Value 2" name="place2">
+    <input type="submit" name="query2" value="query">
+    </form>
+    <br>
+    <br>
+     <form id="query3_form" action="/query3" method="POST" >
+    <label><b>Enter name to modify</b></label>
+    <input type="text" placeholder="Last Name" name="lname">
+    <br>
+    <br>
+    <label><b>fare range value 1</b></label>
+    <input type="text" placeholder="Enter Range Value 1" name="range1">
+    <label><b>fare range value 2</b></label>
+    <input type="text" placeholder="Enter Range Value 1" name="range2">
+    <input type="submit" name="query3" value="query">
+    </form>
+    <br>
+    <br>
+    <form id="rds" action="/rds" method="POST" >
+    <input type="text" placeholder="Enter number of loops" name="loop1">
+    <input type="submit" placeholder="rds" name="rds" value="RDS">
+    </form>
+    <br>
+    <br>
+
+    <form id="mem" action="/mem" method="POST" >
+    <input type="text" placeholder="Enter number of loops" name="loop2">
+    <input type="submit" placeholder="mem" name="mem" value="MEMCACHE">
+    </form>
+    <br>
+    <br>
+    <form id="memdata" action="/memdata" method="POST" >
+    <input type="submit" placeholder="mem" name="memdata" value="Memcache with Data">
+    </form>
+    <br>
+    <br>
+    <form id="usermemrds" action="/usrmemrds" method="POST" >
+    <input type="text" placeholder="Enter  Query" name="q1" height="200px" width="300px">
+    <input type="text" placeholder="Enter number of loops" name="loop3" >
+    <input type="submit" placeholder="mem" name="usr" value="MEMCACHE">
+    <input type="submit" placeholder="mem" name="usr" value="RDS">
+    </form>
+    <br>
+    <br>
+    <form id="quiz1" action="/quiz1" method="POST" >
+    <input type="text" placeholder="surname" name="surname" >
+
+    <input type="submit" placeholder="mem" name="quiz1" value="MEMCACHE">
+    <input type="submit" placeholder="mem" name="quiz1" value="RDS">
+    </form>
+    <br>
+    <br>
+    <form id="quiz2" action="/quiz2" method="POST" >
+    <input type="text" placeholder="state" name="state" >
+    <input type="text" placeholder="height range1" name="range1" >
+    <input type="text" placeholder="height range2" name="range2" >
+    <input type="text" placeholder="loop" name="loopquiz1" >
+
+    <input type="submit" placeholder="mem" name="quiz2" value="MEMCACHE">
+    <input type="submit" placeholder="mem" name="quiz2" value="RDS">
+    </form>
+    <br>
+    <br>
+   </div>
+
+ </body>
+
+</html>
